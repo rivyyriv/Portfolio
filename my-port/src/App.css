@@ -27,6 +27,12 @@
 .App-link {
   color: #61dafb;
 }
+.Card {
+  display: flex; /* or inline-flex */
+  flex-direction: row ;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
 @keyframes App-logo-spin {
   from {

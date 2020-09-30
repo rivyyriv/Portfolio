@@ -11,9 +11,9 @@ import {
 } from "react-router-dom";
 import Projects from './Components/Projects.js'
 import About from './Components/About.js'
-import Education from './Components/Education.js'
 import Experiance from './Components/Experiance.js'
-import Resume from './Components/Resume.js'
+import { Box } from '@material-ui/core';
+
 
 
 const useStyles = makeStyles({
@@ -31,34 +31,32 @@ export default function Menu() {
   };
 
   return (
-  <Router>
-    <Paper className={classes.root} >
-        <Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
-        <Tab component={Link} label="About" to={'/About'}/>
-        <Tab component={Link} label="Projects" to={'/Projects'}/>
-        <Tab component={Link} label="Experiance" to={'/Experiance'}/>
-        <Tab component={Link} label="Education" to={'/Education'}/>
-        <Tab component={Link} label="Resume" to={'/Resume'}/>
+   <Box bgcolor="#F5F5F5" color="84a9ac">
+    <Router>
+      <Paper className={classes.root} >
 
-      </Tabs>
-    </Paper>
-      <Switch>
-        <Route path="/About">
-          <About />
-        </Route>
-        <Route path="/Projects">
-          <Projects />
-        </Route> 
-        <Route path="/Experiance">
-          <Experiance />
-        </Route>
-        <Route path="/Education">
-          <Education />
-        </Route>
-        <Route path="/Resume">
-          <Resume />
-        </Route>
-      </Switch>
-  </Router>
+        <Box bgcolor="#D5D5D7">
+          <Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
+          <Tab component={Link} label="About" to={'/About'}/>
+          <Tab component={Link} label="Projects" to={'/Projects'}/>
+          <Tab component={Link} label="Experiance And Education" to={'/Experiance'}/>
+          </Tabs>
+        </Box>
+
+      </Paper>
+        <Switch>
+          <Route path="/About">
+            <About />
+          </Route>
+          <Route path="/Projects">
+            <Projects />
+          </Route> 
+          <Route path="/Experiance">
+            <Experiance />
+          </Route>
+        </Switch>
+    </Router>
+  </Box>
+
   );
 }
