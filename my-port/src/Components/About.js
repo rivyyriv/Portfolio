@@ -17,19 +17,25 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
 
   },
+  about: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    width: '370px',
+
+  },
+
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-   
 
   },
   media: {
     height: 0,
     paddingTop: '100.25%', // 16:9
   },
-  grid: {
-  },
+ 
 }));
 
 export default function About() {
@@ -38,33 +44,46 @@ export default function About() {
 
   return (
     <div className={classes.root}>
-        
-      <Grid spacing={3} wrap="wrap" container direction="row" justify="space-evenly" alignItems="center">
-        
-        <Grid container={true} item xs={3} className={classes.grid}>
-          <Paper className={classes.paper}>
-            <Typography variant="h4" color='textPrimary' gutterBottom>River Smith</Typography> 
-            <Typography variant="h5"  gutterBottom>Front End Web Developer</Typography> 
-            <Typography variant="h6"  gutterBottom>Cell : 801.850.7012 rivyyriv@gmail.com</Typography> 
-           <Card>
-            <CardMedia className={classes.media} image={Profile} title="Paella dish"/>
-           </Card>
-          </Paper>
-        </Grid>
-   
-        <Grid container={true} item xs={6} className={classes.grid}>
-          <Paper className={classes.paper}>
-          <Typography variant="h5" color='textPrimary' gutterBottom>Languages</Typography> 
-            <Typography variant="h6" gutterBottom> JavaScript, HTML, CSS </Typography>
-            <Typography variant="h5" color='textPrimary' gutterBottom>Frameworks</Typography> 
-            <Typography variant="h6" gutterBottom>React, Redux, Axios, Restful APIs, Bootstrap, ReactStrap, Material-UI, SASS, LESS, Flexbox, NPM, Yarn, Git, GitHub.</Typography>
-            <Typography variant="h5" color='textPrimary' gutterBottom> Professional Skills</Typography>
-            <Typography variant="h6" gutterBottom> Problem Solver, Code Organization, Punctual, Analytical, Detail Oriented, Creative, Visual, Resourceful</Typography>
-          </Paper>
-        </Grid>
-        
 
-      </Grid>
+      <Box display="flex"  flexDirection="row" justifyContent="space-evenly" flexWrap="wrap">
+          
+          
+        <Box m={1.5}>
+
+            <Paper m={3} className={classes.paper}>
+              <Typography variant="h4" color='textPrimary' gutterBottom>River Smith</Typography> 
+              <Typography variant="h5"  gutterBottom>Front End Web Developer</Typography> 
+              <Typography variant="h6"  gutterBottom>Cell : 801.850.7012 rivyyriv@gmail.com</Typography> 
+            <Card>
+              <CardMedia className={classes.media} image={Profile} title="Paella dish"/>
+            </Card>
+            </Paper>
+          </Box>
+
+          <Box m={1.5}>
+
+          <Paper m={3}  className={classes.about}>
+          <Typography variant="h5" color='textPrimary' gutterBottom>About</Typography> 
+            <Typography variant="h6" gutterBottom> I am an Experienced Freelance Web Developer with a demonstrated history of working in JavaScript and React to build elegant front end interaction through components. I enjoy using code to solve real problems! I thrive in environments that require constant learning and adapting.</Typography>
+            <Typography variant="h6" gutterBottom> Before finding my passion for web development I was a motivated sales representative. I was in this line of work for many years, filing many different roles and responsibilities while learning to create quality business. 
+
+          </Typography>
+
+          </Paper>
+          </Box>
+
+          <Box m={1.5}>
+
+            <Paper m={3}  className={classes.paper}>
+            <Typography variant="h5" color='textPrimary' gutterBottom>Languages</Typography> 
+              <Typography variant="h6" gutterBottom> JavaScript, HTML, CSS </Typography>
+              <Typography variant="h5" color='textPrimary' gutterBottom>Frameworks</Typography> 
+              <Typography variant="h6" gutterBottom>React, Redux, Axios, Restful APIs, Bootstrap, ReactStrap, Material-UI, SASS, LESS, Flexbox, NPM, Yarn, Git, GitHub.</Typography>
+              <Typography variant="h5" color='textPrimary' gutterBottom> Professional Skills</Typography>
+              <Typography variant="h6" gutterBottom> Problem Solver, Code Organization, Punctual, Analytical, Detail Oriented, Creative, Visual, Resourceful</Typography>
+            </Paper>
+          </Box>
+      </Box>
     </div>
   );
 }
