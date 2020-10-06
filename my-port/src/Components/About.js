@@ -52,8 +52,6 @@ export default function About() {
 
             <Paper m={3} className={classes.paper}>
               <Typography variant="h4" color='textPrimary' gutterBottom>River Smith</Typography> 
-              <Typography variant="h5"  gutterBottom>Front End Web Developer</Typography> 
-              <Typography variant="h6"  gutterBottom>Cell : 801.850.7012 rivyyriv@gmail.com</Typography> 
             <Card>
               <CardMedia className={classes.media} image={Profile} title="Paella dish"/>
             </Card>
