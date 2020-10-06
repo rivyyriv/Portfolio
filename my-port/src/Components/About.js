@@ -24,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
     width: '370px',
 
   },
+  pic: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    width: '370px',
+
+  },
 
   paper: {
     padding: theme.spacing(2),
@@ -50,8 +57,10 @@ export default function About() {
           
         <Box m={1.5}>
 
-            <Paper m={3} className={classes.paper}>
+            <Paper m={3} className={classes.pic}>
               <Typography variant="h4" color='textPrimary' gutterBottom>River Smith</Typography> 
+              <Typography variant="h5" color='textSecondary' gutterBottom>Front-End Web-Developer</Typography> 
+
             <Card>
               <CardMedia className={classes.media} image={Profile} title="Paella dish"/>
             </Card>
